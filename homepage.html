@@ -1,0 +1,3361 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tập đoàn Trang trí Tinh Nghệ - Thương hiệu từ 1991, hơn 300 chi nhánh toàn quốc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #00d4aa 0%, #00a3e0 100%);
+            --primary-color: #00d4aa;
+            --primary-color-dark: #00a3e0;
+        }
+
+        body {
+            font-family: '微软雅黑', '宋体', Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: normal;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 6px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .location-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #666666;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 0;
+            flex: 0 0 auto;
+        }
+
+        .search-bar select {
+            padding: 8px 40px 8px 15px;
+            border: 1px solid #e5e5e5;
+            border-right: none;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            appearance: none;
+            min-width: 100px;
+            color: #333333;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            min-width: 380px;
+            color: #333333;
+        }
+
+        .search-bar input::placeholder {
+            color: #999999;
+        }
+
+        .search-bar button {
+            padding: 8px 35px;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border: none;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        .search-bar button:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info .phone-icon {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-info .phone-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            line-height: 1;
+        }
+
+        .contact-info .service-hours {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #ffffff;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .nav-item {
+            padding: 18px 28px;
+            font-size: 15px;
+            color: #333333;
+            text-decoration: none;
+            transition: color 300ms;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .nav-item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+
+        .hero-slider {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 800ms ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            pointer-events: none;
+        }
+
+        .hero-arrow {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333333;
+            font-size: 24px;
+            transition: background-color 300ms;
+            pointer-events: all;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+        }
+
+        .hero-arrow:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .hero-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .hero-dot {
+            width: 40px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        .hero-dot.active {
+            background-color: var(--primary-color);
+        }
+
+        .hero-dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Services Quick Access */
+        .services-quick {
+            background-color: #ffffff;
+            padding: 40px 80px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .services-quick-container {
+            max-width: 1920px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .service-quick-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 30px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            transition: all 300ms ease;
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+
+        .service-quick-item:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: rgba(229, 1, 32, 0.1) 0px 8px 24px 0px;
+        }
+
+        .service-quick-item:hover .service-quick-title {
+            color: var(--primary-color);
+        }
+
+        .service-quick-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+        }
+
+        .service-quick-content {
+            flex: 1;
+        }
+
+        .service-quick-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 8px;
+            transition: color 300ms ease;
+        }
+
+        .service-quick-desc {
+            font-size: 13px;
+            color: #999999;
+            line-height: 1.4;
+        }
+
+        /* Quote Calculator Section */
+        .quote-calculator-section {
+            background-color: #ffffff;
+            padding: 30px 80px;
+        }
+
+        .quote-calculator-container {
+            max-width: 1920px;
+            margin: 0 auto;
+            display: flex;
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px 0px;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .quote-calc-left {
+            position: relative;
+            flex: 0 0 35%;
+            background-color: #000000;
+            min-width: 0;
+            height: 100%;
+        }
+
+        .quote-calc-left::after {
+            display: none;
+        }
+
+        .quote-calc-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .quote-calc-overlay-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+            color: #ffffff;
+        }
+
+        .quote-calc-overlay-content h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .quote-calc-overlay-content p {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .quote-calc-overlay-content span {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .quote-calc-center {
+            flex: 1;
+            padding: 20px 25px;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .quote-calc-center::after {
+            display: none;
+        }
+
+        .quote-calc-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 25px;
+        }
+
+        .quote-calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quote-calc-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .quote-calc-select,
+        .quote-calc-input,
+        .quote-calc-phone-input {
+            padding: 10px 15px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        .quote-calc-select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            appearance: none;
+            padding-right: 40px;
+        }
+
+        .quote-calc-input-group {
+            position: relative;
+        }
+
+        .quote-calc-input {
+            width: 100%;
+            padding-right: 50px;
+        }
+
+        .quote-calc-unit {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .quote-calc-phone-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .quote-calc-phone-input {
+            flex: 1;
+            border: none;
+            padding: 0;
+        }
+
+        .quote-calc-phone-input:focus {
+            outline: none;
+        }
+
+        .quote-calc-button {
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        .quote-calc-button:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .quote-calc-right {
+            width: auto;
+            flex: 0 0 22%;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            padding: 20px 20px;
+            border-left: 1px solid #f1f1f1;
+        }
+
+        .quote-calc-result {
+            text-align: center;
+        }
+
+        .quote-result-label {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 15px;
+        }
+
+        .quote-result-amount {
+            margin-bottom: 10px;
+        }
+
+        .quote-result-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            animation: jumpNumber 0.6s infinite;
+        }
+
+        @keyframes jumpNumber {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .quote-result-currency {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-left: 3px;
+        }
+
+        .quote-result-arrow {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .quote-result-note {
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: #ffffff;
+            padding: 80px;
+            max-width: 1920px;
+            margin: 60px auto 0;
+        }
+
+        .quote-container {
+            display: grid;
+            grid-template-columns: 420px 1fr 350px;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .quote-image {
+            width: 100%;
+            height: 280px;
+            background-color: #000000;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .quote-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quote-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #ffffff;
+        }
+
+        .quote-image-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .quote-image-subtitle {
+            font-size: 13px;
+            color: #cccccc;
+        }
+
+        .quote-form {
+            background-color: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .quote-form-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .quote-form-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .quote-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .quote-form select,
+        .quote-form input {
+            padding: 10px 15px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .quote-form button {
+            width: 100%;
+            padding: 13px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 300ms;
+        }
+
+        .quote-form button:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .quote-result {
+            background-color: #fff5f5;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .quote-result-label {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 10px;
+        }
+
+        .quote-result-price {
+            font-size: 35px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .quote-result-unit {
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        .quote-result-note {
+            font-size: 13px;
+            color: #999999;
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        /* Feature Cards Section */
+        .feature-cards-section {
+            background-color: #f9f9f9;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .feature-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .feature-card:first-child {
+            grid-row: 1 / 3;
+            grid-column: 1;
+            height: 100%;
+        }
+
+        .feature-card:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .feature-card:nth-child(3) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .feature-card {
+            position: relative;
+            height: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+
+        .feature-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .feature-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.4), transparent);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .feature-card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .feature-card-desc {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .feature-card-arrow {
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333333;
+            font-size: 20px;
+        }
+
+        /* Brand Section */
+        .brand-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/Picture10.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 240px 80px;
+            text-align: center;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        /* Brand Title */
+        .brand-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .brand-subtitle {
+            font-size: 15px;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+        }
+
+        .brand-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .brand-button {
+            padding: 13px 40px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 300ms;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .brand-button.primary {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: 2px solid var(--primary-color);
+        }
+
+        .brand-button.primary:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+        }
+
+        .brand-button.secondary {
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #e5e5e5;
+        }
+
+        .brand-button.secondary:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Design Cases Section */
+        .design-cases-section {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 60px auto 0;
+        }
+
+        .design-cases-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .design-cases-subtitle {
+            font-size: 14px;
+            color: #999999;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .design-cases-container {
+            display: flex;
+            gap: 10px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .design-case-card {
+            position: relative;
+            flex: 1;
+            transition: flex 0.5s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .design-case-card:nth-child(3) {
+            flex: 2.5;
+        }
+
+        .design-case-card:hover {
+            flex: 2.5;
+        }
+
+        .design-case-card:hover ~ .design-case-card:nth-child(3) {
+            flex: 1;
+        }
+
+        .design-case-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .design-case-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .design-case-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.7));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            color: #ffffff;
+        }
+
+        .design-case-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .design-case-desc {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .design-case-button {
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            opacity: 1;
+            width: fit-content;
+        }
+
+        .design-case-button:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        .design-case-card:not(:hover):not(:nth-child(3)) .design-case-title,
+        .design-case-card:not(:hover):not(:nth-child(3)) .design-case-desc,
+        .design-case-card:not(:hover):not(:nth-child(3)) .design-case-button {
+            opacity: 0;
+        }
+
+        .design-case-card:hover ~ .design-case-card:nth-child(3) .design-case-title,
+        .design-case-card:hover ~ .design-case-card:nth-child(3) .design-case-desc,
+        .design-case-card:hover ~ .design-case-card:nth-child(3) .design-case-button {
+            opacity: 0;
+        }
+
+        /* Style Gallery Section */
+        .style-gallery-section {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .style-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #f1f1f1;
+            padding-bottom: 15px;
+        }
+
+        .style-tab {
+            font-size: 15px;
+            color: #333333;
+            cursor: pointer;
+            padding: 8px 15px;
+            transition: color 300ms;
+            position: relative;
+        }
+
+        .style-tab:not(:last-child)::after {
+            content: '/';
+            position: absolute;
+            right: -19px;
+            color: #cccccc;
+        }
+
+        .style-tab:hover,
+        .style-tab.active {
+            color: var(--primary-color);
+        }
+
+        .style-filter {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-item {
+            font-size: 13px;
+            color: #333333;
+            padding: 5px 15px;
+            cursor: pointer;
+            transition: color 300ms;
+        }
+
+        .filter-item:hover,
+        .filter-item.active {
+            color: var(--primary-color);
+        }
+
+        .style-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .style-card {
+            position: relative;
+            height: 280px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .style-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+
+        .style-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .style-card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            z-index: 5;
+            transition: opacity 300ms ease;
+        }
+
+        .style-card:hover .style-card-info {
+            opacity: 0;
+        }
+
+        .style-card-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .style-card-details {
+            font-size: 13px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .style-card-details::before {
+            content: '|';
+            color: #ffffff;
+        }
+
+        .style-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 300ms ease;
+            z-index: 8;
+        }
+
+        .style-card:hover::after {
+            opacity: 1;
+        }
+
+        .style-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 300ms ease;
+            z-index: 9;
+            pointer-events: none;
+        }
+
+        .style-card:hover .style-card-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .style-overlay-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .style-overlay-details {
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .style-overlay-details::before {
+            content: '';
+        }
+
+        .style-card-buttons {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            padding: 0 40px;
+        }
+
+        .style-card-button {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid;
+            background-color: transparent;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 300ms ease;
+            border-radius: 4px;
+        }
+
+        .style-card-button.primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .style-card-button.primary:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+        }
+
+        .style-card-button.secondary {
+            border-color: #ffffff;
+            background-color: transparent;
+        }
+
+        .style-card-button.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+
+        .more-button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .more-button {
+            padding: 13px 50px;
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #e5e5e5;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 300ms;
+        }
+
+        .more-button:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .more-button.primary {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+
+        .more-button.primary:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+        }
+
+        .more-button.secondary {
+            background-color: #ffffff;
+            color: #333333;
+            border-color: #e5e5e5;
+        }
+
+        .more-button.secondary:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Designer Section */
+        .designer-section {
+            background-color: #f9f9f9;
+            padding: 60px 80px;
+            text-align: center;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .designer-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            height: 650px;
+        }
+
+        .designer-featured {
+            flex: 0 0 40%;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+
+        .designer-featured img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .designer-featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .designer-featured-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .designer-featured-title {
+            font-size: 16px;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .designer-featured-details {
+            font-size: 13px;
+            color: #cccccc;
+            line-height: 1.8;
+            text-align: left;
+        }
+        
+
+        .designer-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+            height: 100%;
+        }
+
+        .designer-card {
+            background-color: #e5e5e5;
+            border-radius: 0;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            height: 100%;
+            min-height: 200px;
+        }
+
+        .designer-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+
+        .designer-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .designer-card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #ffffff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 300ms;
+        }
+
+        .designer-card:hover .designer-card-info {
+            opacity: 1;
+        }
+
+        .designer-card-name {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .designer-card-title {
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .designer-card.text-card {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid #e0e0e0;
+            border-radius: 0;
+        }
+
+        .designer-card.text-card .text-large {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        .designer-card.text-card .text-small {
+            font-size: 13px;
+            color: #999999;
+        }
+
+        /* Project Management Section */
+        .project-management-section {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .project-management-container {
+            position: relative;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .project-management-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-management-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+        }
+
+        .project-management-content {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            color: #ffffff;
+        }
+
+        .project-features {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .project-feature {
+            background-color: rgba(70, 70, 70, 0.9);
+            padding: 30px;
+            text-align: center;
+            color: #ffffff;
+            transition: background-color 300ms;
+            cursor: pointer;
+        }
+
+        .project-feature:hover {
+            background-color: var(--primary-color);
+        }
+
+        .project-feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .project-feature-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .project-feature-desc {
+            font-size: 13px;
+            color: #cccccc;
+        }
+
+        .project-management-expand {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 300ms;
+        }
+
+        .project-management-expand:hover {
+            background-color: var(--primary-color-dark);
+        }
+
+        /* Video Section */
+        .video-section {
+            background-color: #f9f9f9;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .video-player {
+            position: relative;
+            background-color: #000000;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 500px;
+        }
+
+        .video-player img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .video-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: box-shadow 300ms;
+            height: 100%;
+            min-height: 120px;
+        }
+
+        .video-item:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;
+        }
+
+        .video-item-thumbnail {
+            width: 120px;
+            height: 90px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .video-item-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-item-info {
+            flex: 1;
+        }
+
+        .video-item-title {
+            font-size: 14px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        .video-item-play {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        /* News Section */
+        .news-section {
+            background-color: #ffffff;
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .news-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 15px;
+        }
+
+        .news-tab {
+            font-size: 15px;
+            color: #333333;
+            cursor: pointer;
+            padding: 8px 15px;
+            position: relative;
+            transition: color 300ms;
+        }
+
+        .news-tab:hover,
+        .news-tab.active {
+            color: var(--primary-color);
+        }
+
+        .news-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 40px;
+            align-items: stretch;
+        }
+
+        .news-featured {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .news-featured img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+
+        .news-featured:hover img {
+            transform: scale(1.05);
+        }
+
+        .news-featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #ffffff;
+        }
+
+        .news-featured-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .news-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            height: 100%;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            height: 100%;
+            min-height: 100px;
+        }
+
+        .news-item-thumbnail {
+            width: 150px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .news-item-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-item-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .news-item-date {
+            font-size: 35px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 0;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .news-item-month {
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 0;
+        }
+
+        .news-item-date-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+
+        .news-item-description {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-item-title {
+            font-size: 14px;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        /* CTA Banners */
+        .cta-banners {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .cta-banner {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cta-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms;
+        }
+
+        .cta-banner:hover img {
+            transform: scale(1.1);
+        }
+
+        .cta-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.5), transparent);
+            display: flex;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .cta-banner-content h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .cta-banner-content p {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        /* Process Section */
+        .process-section {
+            background-color: var(--primary-color);
+            padding: 60px 80px;
+            max-width: 1920px;
+            margin: 60px auto 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .process-step {
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 120px;
+        }
+
+        .process-step-icon {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            margin: 0 auto 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            background-color: transparent;
+        }
+
+        .process-step-title {
+            font-size: 12px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            min-height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .process-step-number {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 700;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .process-step-number::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            width: calc(100% + 20px);
+            height: 2px;
+            background-color: #ffffff;
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child .process-step-number::after {
+            display: none;
+        }
+
+        /* Footer Top Navigation */
+        .footer-top-nav {
+            background-color: #2a2a2a;
+            padding: 40px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-top-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-top-item {
+            color: #ffffff;
+        }
+
+        .footer-top-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .footer-top-title {
+            font-size: 14px;
+        }
+
+        /* Footer Main */
+        .footer {
+            background-color: #1a1a1a;
+            padding: 60px 80px 30px;
+            color: #cccccc;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 300px;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 300ms;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-qr-codes {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .footer-qr-code {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+
+        .footer-qr-code img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-contact-phones {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-phone-item h5 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .footer-phone-item p {
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .footer-address {
+            font-size: 13px;
+            color: #999999;
+            line-height: 1.6;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #999999;
+            text-align: center;
+        }
+
+        /* Floating Button */
+        .floating-button {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px 0px;
+            transition: all 300ms;
+        }
+
+        .floating-btn:hover {
+            background-color: var(--primary-color-dark);
+            transform: translateY(-3px);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px 0px;
+        }
+
+        .floating-btn-text {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .header-top,
+            .nav-container,
+            .services-grid,
+            .quote-section,
+            .feature-cards-section,
+            .brand-section,
+            .style-gallery-section,
+            .designer-section,
+            .project-management-section,
+            .video-section,
+            .news-section,
+            .process-section,
+            .footer-top-nav,
+            .footer {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .designer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .style-gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .quote-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="logo.png" alt="Logo Tinh Nghệ">
+                <div class="location-selector">
+                    <span class="material-symbols-outlined" style="font-size: 16px; color: var(--primary-color);">location_on</span>
+                    <span>Hà Nội</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <select>
+                    <option>Toàn bộ</option>
+                    <option>Nhà thiết kế</option>
+                    <option>Mẫu thiết kế</option>
+                </select>
+                <input type="text" placeholder="">
+                <button>Tìm kiếm</button>
+            </div>
+
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <span class="material-symbols-outlined" style="color: var(--primary-color); font-size: 20px;">call</span>
+                </div>
+                <div class="contact-info-text">
+                    <div class="service-hours">Dịch vụ khách hàng toàn quốc</div>
+                    <div class="phone-number">400-101-1991</div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#" class="nav-item active">Trang chủ</a>
+                <a href="#" class="nav-item">Mẫu thiết kế</a>
+                <a href="#" class="nav-item">Nhà thiết kế</a>
+                <a href="#" class="nav-item">Chi nhánh toàn quốc</a>
+                <a href="#" class="nav-item">Quản lý công trình</a>
+                <a href="#" class="nav-item">Vật liệu xanh</a>
+                <a href="#" class="nav-item">Cẩm nang trang trí</a>
+                <a href="#" class="nav-item">Sản phẩm</a>
+                <a href="#" class="nav-item">Về Tinh Nghệ</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="assets/banner_1.jpg" alt="Banner 1">
+            </div>
+            <div class="hero-slide">
+                <img src="assets/banner_2.jpg" alt="Banner 2">
+            </div>
+            <div class="hero-slide">
+                <img src="assets/banner_3.jpg" alt="Banner 3">
+            </div>
+        </div>
+
+        <div class="hero-arrows">
+            <button class="hero-arrow hero-arrow-left"><span class="material-symbols-outlined">chevron_left</span></button>
+            <button class="hero-arrow hero-arrow-right"><span class="material-symbols-outlined">chevron_right</span></button>
+        </div>
+
+        <div class="hero-dots">
+            <span class="hero-dot active" data-slide="0"></span>
+            <span class="hero-dot" data-slide="1"></span>
+            <span class="hero-dot" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Services Quick Access -->
+    <section class="services-quick">
+        <div class="services-quick-container">
+            <div class="service-quick-item">
+                <div class="service-quick-content">
+                    <div class="service-quick-title">Báo giá miễn phí</div>
+                    <div class="service-quick-desc">Tính toán chính xác mọi giai đoạn</div>
+                </div>
+                <div class="service-quick-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" rx="8" fill="#FFE5E5"/>
+                        <path d="M20 15H35L40 20V40C40 41.1 39.1 42 38 42H20C18.9 42 18 41.1 18 40V17C18 15.9 18.9 15 20 15Z" fill="var(--primary-color)"/>
+                        <rect x="23" y="25" width="14" height="2" fill="white"/>
+                        <rect x="23" y="30" width="14" height="2" fill="white"/>
+                        <rect x="23" y="35" width="10" height="2" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="service-quick-item">
+                <div class="service-quick-content">
+                    <div class="service-quick-title">Đo đạc miễn phí</div>
+                    <div class="service-quick-desc">Đặt lịch khảo sát tại nhà miễn phí</div>
+                </div>
+                <div class="service-quick-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="#FFE5E5"/>
+                        <circle cx="30" cy="30" r="15" fill="var(--primary-color)"/>
+                        <circle cx="30" cy="30" r="8" fill="white"/>
+                        <circle cx="30" cy="30" r="3" fill="var(--primary-color)"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="service-quick-item">
+                <div class="service-quick-content">
+                    <div class="service-quick-title">Quy hoạch mặt bằng</div>
+                    <div class="service-quick-desc">Nhận phương án thiết kế chi tiết hỗ trợ</div>
+                </div>
+                <div class="service-quick-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" rx="8" fill="#FFE5E5"/>
+                        <path d="M18 18H28V28H18V18Z" fill="var(--primary-color)"/>
+                        <path d="M32 18H42V28H32V18Z" fill="var(--primary-color)" opacity="0.6"/>
+                        <path d="M18 32H28V42H18V32Z" fill="var(--primary-color)" opacity="0.6"/>
+                        <path d="M32 32H42V42H32V32Z" fill="var(--primary-color)"/>
+                        <rect x="28" y="23" width="4" height="2" fill="white"/>
+                        <rect x="23" y="28" width="2" height="4" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="service-quick-item">
+                <div class="service-quick-content">
+                    <div class="service-quick-title">Trang trí toàn nhà</div>
+                    <div class="service-quick-desc">Thiết kế riêng theo nhu cầu gia đình</div>
+                </div>
+                <div class="service-quick-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="60" height="60" rx="8" fill="#FFE5E5"/>
+                        <path d="M30 15L45 25V42C45 43.1 44.1 44 43 44H17C15.9 44 15 43.1 15 42V25L30 15Z" fill="var(--primary-color)"/>
+                        <rect x="26" y="32" width="8" height="12" fill="white"/>
+                        <circle cx="28" cy="37" r="1" fill="var(--primary-color)"/>
+                        <path d="M20 25H40V28H20V25Z" fill="white" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Section -->
+    <section class="quote-calculator-section">
+        <div class="quote-calculator-container">
+            <div class="quote-calc-left">
+                <img src="assets/bao_gia.jpg" alt="Nhận báo giá">
+                <div class="quote-calc-overlay-content">
+                    <h2>Nhận báo giá trang trí miễn phí</h2>
+                    <p>Đã có <span id="quote-counter">104960</span> người nhận báo giá</p>
+                </div>
+            </div>
+
+            <div class="quote-calc-center">
+                <h2 class="quote-calc-title">Trang trí nhà tôi cần bao nhiêu tiền?</h2>
+                <div class="quote-calc-form">
+                    <div class="quote-calc-row">
+                        <select class="quote-calc-select" id="province-select">
+                            <option>Tỉnh/Thành</option>
+                            <option>Hà Nội</option>
+                            <option>TP.HCM</option>
+                            <option>Đà Nẵng</option>
+                        </select>
+                        <select class="quote-calc-select" id="district-select">
+                            <option>Quận/Huyện</option>
+                        </select>
+                    </div>
+                    <div class="quote-calc-input-group">
+                        <input type="number" placeholder="Diện tích ngôi nhà" class="quote-calc-input" id="area-input">
+                        <span class="quote-calc-unit">m²</span>
+                    </div>
+                    <div class="quote-calc-phone-row">
+                        <span class="material-symbols-outlined" style="color: #e5e5e5; font-size: 20px;">call</span>
+                        <input type="text" placeholder="Nhập số điện thoại của bạn" class="quote-calc-phone-input" id="phone-input">
+                    </div>
+                    <button class="quote-calc-button" onclick="calculateQuote()">Nhận báo giá miễn phí</button>
+                </div>
+            </div>
+
+            <div class="quote-calc-right">
+                <div class="quote-calc-result">
+                    <div class="quote-result-label">Dự toán trang trí của bạn là</div>
+                    <div class="quote-result-amount">
+                        <span class="quote-result-number" id="quote-result">1416690</span>
+                        <span class="quote-result-currency">đ</span>
+                    </div>
+                    <div class="quote-result-arrow">›</div>
+                    <div class="quote-result-note">
+                        *Vì lựa chọn vật liệu khác nhau, giá có thể chênh lệch! Giá trên chỉ mang tính chất tham khảo, cụ thể theo thực tế là chuẩn!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <!-- Feature Cards Section -->
+    <section class="feature-cards-section">
+        <div class="feature-cards-grid">
+            <div class="feature-card">
+                <img src="assets/Picture7.jpg" alt="Quản lý công trình" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="feature-card-overlay">
+                    <div class="feature-card-title">Quản lý công trình</div>
+                    <div class="feature-card-desc">10 quy trình kiểm soát, 6 bảo đảm<br>Nhiều bằng sáng chế quốc gia</div>
+                    <div class="feature-card-arrow"><span class="material-symbols-outlined">arrow_forward</span></div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/Picture8.jpg" alt="Vật liệu xanh" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="feature-card-overlay">
+                    <div class="feature-card-title">Vật liệu xanh</div>
+                    <div class="feature-card-desc">Gỗ không formaldehyde<br>Chuyên nghiệp, thân thiện môi trường</div>
+                    <div class="feature-card-arrow"><span class="material-symbols-outlined">arrow_forward</span></div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/Picture9.png" alt="Trả góp" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="feature-card-overlay">
+                    <div class="feature-card-title">Trả góp linh hoạt</div>
+                    <div class="feature-card-desc">0% trả trước, lãi suất thấp<br>Không cần tài sản thế chấp</div>
+                    <div class="feature-card-arrow"><span class="material-symbols-outlined">arrow_forward</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Section -->
+    <section class="brand-section">
+        <h2 class="brand-title">Thương hiệu từ 1991, hơn 300 chi nhánh toàn quốc</h2>
+        <p class="brand-subtitle">Hàng nghìn nhà thiết kế chuyên nghiệp, đã phục vụ hơn 1 triệu gia đình</p>
+        <div class="brand-actions">
+            <a href="#" class="brand-button primary">
+                <span class="material-symbols-outlined">calculate</span>
+                Thiết kế trang trí hết bao nhiêu?
+            </a>
+            <a href="#" class="brand-button secondary">
+                Tìm hiểu Tinh Nghệ
+            </a>
+        </div>
+    </section>
+
+    <!-- Design Cases Section -->
+    <section class="design-cases-section">
+        <h2 class="design-cases-title">Thiết kế mẫu · Đáp ứng nhu cầu trang trí của bạn</h2>
+        <p class="design-cases-subtitle">Hơn 10 phong cách trang trí thịnh hành, hơn 10,000 mẫu thiết kế tinh tế, giúp bạn nhanh chóng tìm được cảm hứng trang trí!</p>
+        
+        <div class="design-cases-container">
+            <div class="design-case-card">
+                <img src="assets/Picture11.jpg" alt="Biệt thự">
+                <div class="design-case-overlay">
+                    <div class="design-case-title">Biệt thự</div>
+                    <div class="design-case-desc">Thiết kế riêng cao cấp</div>
+                    <button class="design-case-button">Xem chi tiết</button>
+                </div>
+            </div>
+            
+            <div class="design-case-card">
+                <img src="assets/Picture14.jpg" alt="Nhà mới">
+                <div class="design-case-overlay">
+                    <div class="design-case-title">Nhà mới</div>
+                    <div class="design-case-desc">Trang trí chất lượng cao</div>
+                    <button class="design-case-button">Xem chi tiết</button>
+                </div>
+            </div>
+            
+            <div class="design-case-card">
+                <img src="assets/Picture15.jpg" alt="Cải tạo">
+                <div class="design-case-overlay">
+                    <div class="design-case-title">Cải tạo</div>
+                    <div class="design-case-desc">Làm mới nâng cấp nhà cũ</div>
+                    <button class="design-case-button">Xem chi tiết</button>
+                </div>
+            </div>
+            
+            <div class="design-case-card">
+                <img src="assets/Picture16.jpg" alt="Nội thất cao cấp">
+                <div class="design-case-overlay">
+                    <div class="design-case-title">Nội thất cao cấp</div>
+                    <div class="design-case-desc">Hoàn thiện xong vào ở ngay</div>
+                    <button class="design-case-button">Xem chi tiết</button>
+                </div>
+            </div>
+            
+            <div class="design-case-card">
+                <img src="assets/Picture17.jpg" alt="Tùy chỉnh">
+                <div class="design-case-overlay">
+                    <div class="design-case-title">Tùy chỉnh cá nhân</div>
+                    <div class="design-case-desc">Thiết kế riêng theo sở thích</div>
+                    <button class="design-case-button">Xem chi tiết</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Gallery Section -->
+    <section class="style-gallery-section">
+        <div class="style-tabs">
+            <div class="style-tab active">Biệt thự</div>
+            <div class="style-tab">Nhà mới</div>
+            <div class="style-tab">Cải tạo</div>
+            <div class="style-tab">Nội thất cao cấp</div>
+            <div class="style-tab">Thiết kế riêng</div>
+        </div>
+
+        <div class="style-gallery-grid">
+            <div class="style-card">
+                <img src="assets/Picture17.jpg" alt="Căn hộ hiện đại">
+                <div class="style-card-info">
+                    <div class="style-card-name">Căn hộ Vinhomes</div>
+                    <div class="style-card-details">Hiện đại tối giản | 201-300m² | 4 phòng</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Căn hộ Vinhomes</div>
+                    <div class="style-overlay-details">Hiện đại tối giản | 201-300m² | 4 phòng</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <img src="assets/Picture18.jpg" alt="Phòng khách">
+                <div class="style-card-info">
+                    <div class="style-card-name">Biệt thự Phú Mỹ Hưng</div>
+                    <div class="style-card-details">Hiện đại | 101-200m² | 3 phòng</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Biệt thự Phú Mỹ Hưng</div>
+                    <div class="style-overlay-details">Hiện đại | 101-200m² | 3 phòng</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <img src="assets/Picture19.png" alt="Phòng ngủ">
+                <div class="style-card-info">
+                    <div class="style-card-name">Căn hộ Landmark 81</div>
+                    <div class="style-card-details">Sang trọng | 600m² trở lên | Penthouse</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Căn hộ Landmark 81</div>
+                    <div class="style-overlay-details">Sang trọng | 600m² trở lên | Penthouse</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <img src="assets/Picture20.jpg" alt="Phòng bếp">
+                <div class="style-card-info">
+                    <div class="style-card-name">Nhà phố Thảo Điền</div>
+                    <div class="style-card-details">Hiện đại | 101-200m² | 3 tầng</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Nhà phố Thảo Điền</div>
+                    <div class="style-overlay-details">Hiện đại | 101-200m² | 3 tầng</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <img src="assets/Picture23.jpg" alt="Phòng tắm">
+                <div class="style-card-info">
+                    <div class="style-card-name">Căn hộ The Manor</div>
+                    <div class="style-card-details">Tối giản | 101-200m² | 3 phòng</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Căn hộ The Manor</div>
+                    <div class="style-overlay-details">Tối giản | 101-200m² | 3 phòng</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-card">
+                <img src="assets/Picture24.png" alt="Văn phòng">
+                <div class="style-card-info">
+                    <div class="style-card-name">Penthouse Masteri</div>
+                    <div class="style-card-details">Cao cấp | 600m² trở lên | Duplex</div>
+                </div>
+                <div class="style-card-overlay">
+                    <div class="style-overlay-title">Penthouse Masteri</div>
+                    <div class="style-overlay-details">Cao cấp | 600m² trở lên | Duplex</div>
+                    <div class="style-card-buttons">
+                        <button class="style-card-button primary">我要装修同款</button>
+                        <button class="style-card-button secondary">查看更多 ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-button-container">
+            <button class="more-button primary">Thiết kế này bao nhiêu tiền?</button>
+            <button class="more-button secondary">Xem thêm mẫu thiết kế</button>
+        </div>
+    </section>
+
+    <!-- Designer Section -->
+    <section class="designer-section">
+        <h2 class="section-title">Đội ngũ thiết kế · Hàng nghìn nhà thiết kế chuyên nghiệp</h2>
+        <p class="section-subtitle">Thiết kế cao cấp, đáp ứng mọi kỳ vọng về ngôi nhà đẹp!</p>
+
+        <div class="designer-container">
+            <!-- Featured Designer - Large Image on Left -->
+            <div class="designer-featured">
+                <img src="assets/nhan vien/Picture25.jpg" alt="Thiết kế trưởng">
+                <div class="designer-featured-overlay">
+                    <div class="designer-featured-name">Nguyễn Văn An</div>
+                    <div class="designer-featured-title">Thiết kế trưởng</div>
+                    <div class="designer-featured-details">
+                        Kinh nghiệm: 28 năm<br>
+                        Phong cách: Hiện đại, tối giản<br>
+                        Dự án hoàn thành: 500+ công trình<br>
+                        Chuyên môn: Biệt thự, căn hộ cao cấp
+                    </div>
+                </div>
+            </div>
+
+            <!-- Designer Grid - Small Images on Right (4x3) -->
+            <div class="designer-grid">
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture26.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Trần Thị Bình</div>
+                        <div class="designer-card-title">Thiết kế nội thất</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture27.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Lê Minh Châu</div>
+                        <div class="designer-card-title">Kiến trúc sư</div>
+                    </div>
+                </div>
+
+                <div class="designer-card text-card">
+                    <div class="text-large">Kinh nghiệm TB</div>
+                    <div class="text-small">15 năm+</div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture28.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Phạm Quốc Dũng</div>
+                        <div class="designer-card-title">Thiết kế trưởng</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture30.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Hoàng Thị Lan</div>
+                        <div class="designer-card-title">Chuyên gia màu sắc</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture31.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Vũ Thanh Hà</div>
+                        <div class="designer-card-title">Thiết kế nội thất</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture32.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Đỗ Văn Phong</div>
+                        <div class="designer-card-title">Kiến trúc sư</div>
+                    </div>
+                </div>
+
+                <div class="designer-card text-card">
+                    <div class="text-large">Hơn 1000</div>
+                    <div class="text-small">Nhà thiết kế</div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture33.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Bùi Thị Hương</div>
+                        <div class="designer-card-title">Thiết kế trưởng</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture34.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Ngô Minh Tuấn</div>
+                        <div class="designer-card-title">Chuyên gia phong thủy</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture35.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Phan Thị Mai</div>
+                        <div class="designer-card-title">Thiết kế nội thất</div>
+                    </div>
+                </div>
+
+                <div class="designer-card">
+                    <img src="assets/nhan vien/Picture36.jpg" alt="Thiết kế">
+                    <div class="designer-card-info">
+                        <div class="designer-card-name">Lý Văn Sơn</div>
+                        <div class="designer-card-title">Kiến trúc sư</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                <div class="designer-card-info">
+                    <div class="designer-card-name">Võ Thanh Tùng</div>
+                    <div class="designer-card-title">Thiết kế trưởng</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-button-container">
+            <button class="more-button">Xem thêm nhà thiết kế</button>
+        </div>
+    </section>
+
+    <!-- Project Management Section -->
+    <section class="project-management-section">
+        <h2 class="section-title">Quản lý công trình</h2>
+        <p class="section-subtitle">Chất lượng tuyệt hảo, thân thiện môi trường</p>
+
+        <div class="project-management-container">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&h=500&fit=crop" alt="Quản lý công trình" class="project-management-bg">
+            <div class="project-management-overlay"></div>
+
+            <div class="project-features">
+                <div class="project-feature">
+                    <span class="material-symbols-outlined project-feature-icon" style="font-size: 48px;">library_books</span>
+                    <div class="project-feature-title">10 công trình</div>
+                    <div class="project-feature-desc">Kiểm soát tiêu chuẩn</div>
+                </div>
+                <div class="project-feature">
+                    <span class="material-symbols-outlined project-feature-icon" style="font-size: 48px;">verified_user</span>
+                    <div class="project-feature-title">6 bảo đảm</div>
+                    <div class="project-feature-desc">An tâm tuyệt đối</div>
+                </div>
+                <div class="project-feature">
+                    <span class="material-symbols-outlined project-feature-icon" style="font-size: 48px;">fact_check</span>
+                    <div class="project-feature-title">500+</div>
+                    <div class="project-feature-desc">Điểm nghiệm thu</div>
+                </div>
+                <div class="project-feature">
+                    <span class="material-symbols-outlined project-feature-icon" style="font-size: 48px;">emoji_events</span>
+                    <div class="project-feature-title">20+ bằng</div>
+                    <div class="project-feature-desc">Sáng chế quốc gia</div>
+                </div>
+            </div>
+
+            <div class="project-management-expand">
+                <span class="material-symbols-outlined" style="font-size: 32px;">add</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2 class="section-title">Video giới thiệu</h2>
+        <p class="section-subtitle">Xem để hiểu rõ hơn, tin tưởng hơn</p>
+
+        <div class="video-container">
+            <div class="video-player">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1000&h=400&fit=crop" alt="Video chính" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background-color: rgba(229, 1, 32, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    <span class="material-symbols-outlined" style="font-size: 48px; color: white; margin-left: 5px;">play_arrow</span>
+                </div>
+            </div>
+
+            <div class="video-list">
+                <div class="video-item">
+                    <div class="video-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=80&h=60&fit=crop" alt="Video 1">
+                    </div>
+                    <div class="video-item-info">
+                        <div class="video-item-title">Năm mới tốt lành, vạn sự như ý</div>
+                    </div>
+                    <div class="video-item-play">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">play_arrow</span>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=80&h=60&fit=crop" alt="Video 2">
+                    </div>
+                    <div class="video-item-info">
+                        <div class="video-item-title">Đồng hành cùng cuộc sống tốt đẹp</div>
+                    </div>
+                    <div class="video-item-play">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">play_arrow</span>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=80&h=60&fit=crop" alt="Video 3">
+                    </div>
+                    <div class="video-item-info">
+                        <div class="video-item-title">Phóng sự VTV - Doanh nghiệp tiên phong</div>
+                    </div>
+                    <div class="video-item-play">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-button-container" style="margin-top: 30px;">
+            <button class="more-button">Xem thêm</button>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <h2 class="section-title">Tin tức · Thông tin</h2>
+        <p class="section-subtitle">Tin tức mới nhất, khám phá thêm về chúng tôi</p>
+
+        <div class="news-tabs">
+            <div class="news-tab active">Tin doanh nghiệp</div>
+            <div class="news-tab">Tin vui</div>
+        </div>
+
+        <div class="news-grid">
+            <div class="news-featured">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&h=350&fit=crop" alt="Tin nổi bật" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="news-featured-overlay">
+                    <div class="news-featured-title">Hội nghị thượng đỉnh ngành trang trí nội thất lần thứ 9 - Vinh danh doanh nghiệp xuất sắc</div>
+                </div>
+            </div>
+
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=120&h=90&fit=crop" alt="Tin 1">
+                    </div>
+                    <div class="news-item-content">
+                        <div class="news-item-date-wrapper">
+                            <div class="news-item-date">30</div>
+                            <div class="news-item-month">2026-03</div>
+                        </div>
+                        <div class="news-item-description">
+                            <div class="news-item-title">Khởi công an toàn đầu năm mới, Dự án Tinh Nghệ Life đã...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=120&h=90&fit=crop" alt="Tin 2">
+                    </div>
+                    <div class="news-item-content">
+                        <div class="news-item-date-wrapper">
+                            <div class="news-item-date">23</div>
+                            <div class="news-item-month">2026-03</div>
+                        </div>
+                        <div class="news-item-description">
+                            <div class="news-item-title">Tinh Nghệ triển khai chiến dịch 2026 "Trang trí xanh..."</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-item-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=120&h=90&fit=crop" alt="Tin 3">
+                    </div>
+                    <div class="news-item-content">
+                        <div class="news-item-date-wrapper">
+                            <div class="news-item-date">18</div>
+                            <div class="news-item-month">2026-03</div>
+                        </div>
+                        <div class="news-item-description">
+                            <div class="news-item-title">Mở rộng quy mô hoạt động, Tinh Nghệ công bố chiến lược...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="more-button-container">
+            <button class="more-button">Xem thêm</button>
+        </div>
+    </section>
+
+    <!-- CTA Banners -->
+    <section class="cta-banners">
+        <div class="cta-banner">
+            <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=640&h=300&fit=crop" alt="Cuộc sống tốt đẹp">
+            <div class="cta-banner-overlay">
+                <div class="cta-banner-content">
+                    <h3>Tâm huyết kiến tạo cuộc sống đẹp</h3>
+                    <p>Lựa chọn của 2,000,000 gia đình</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=640&h=300&fit=crop" alt="Báo giá">
+            <div class="cta-banner-overlay">
+                <div class="cta-banner-content">
+                    <h3>Trang trí nhà tôi hết bao nhiêu?</h3>
+                    <p>Nhận báo giá miễn phí</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=640&h=300&fit=crop" alt="Thiết kế">
+            <div class="cta-banner-overlay">
+                <div class="cta-banner-content">
+                    <h3>Thiết kế mặt bằng như thế nào?</h3>
+                    <p>Nhận quy hoạch miễn phí</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">event</span></div>
+                <div class="process-step-title">Đặt lịch online</div>
+                <div class="process-step-number">1</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">straighten</span></div>
+                <div class="process-step-title">Đo đạc khảo sát</div>
+                <div class="process-step-number">2</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">architecture</span></div>
+                <div class="process-step-title">Quy hoạch thiết kế</div>
+                <div class="process-step-number">3</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">description</span></div>
+                <div class="process-step-title">Báo giá thiết kế</div>
+                <div class="process-step-number">4</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">check_circle</span></div>
+                <div class="process-step-title">Phương án triển khai</div>
+                <div class="process-step-number">5</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">construction</span></div>
+                <div class="process-step-title">Khởi công xây dựng</div>
+                <div class="process-step-number">6</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">engineering</span></div>
+                <div class="process-step-title">Giám sát thi công</div>
+                <div class="process-step-number">7</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">fact_check</span></div>
+                <div class="process-step-title">Nghiệm thu công trình</div>
+                <div class="process-step-number">8</div>
+            </div>
+            <div class="process-step">
+                <div class="process-step-icon"><span class="material-symbols-outlined" style="font-size: 32px;">chair</span></div>
+                <div class="process-step-title">Bố trí nội thất</div>
+                <div class="process-step-number">9</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Top Navigation -->
+    <section class="footer-top-nav">
+        <div class="footer-top-grid">
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">home_work</span>
+                <div class="footer-top-title">Giới thiệu</div>
+            </div>
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">support_agent</span>
+                <div class="footer-top-title">Tư vấn</div>
+            </div>
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">description</span>
+                <div class="footer-top-title">Báo giá thiết kế</div>
+            </div>
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">search</span>
+                <div class="footer-top-title">Tìm nhà thiết kế</div>
+            </div>
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">construction</span>
+                <div class="footer-top-title">Công trường</div>
+            </div>
+            <div class="footer-top-item">
+                <span class="material-symbols-outlined footer-top-icon">chair</span>
+                <div class="footer-top-title">Nội thất</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu Tinh Nghệ</a></li>
+                    <li><a href="#">Phát triển</a></li>
+                    <li><a href="#">Thành tựu</a></li>
+                    <li><a href="#">Công ty con</a></li>
+                    <li><a href="#">Bảo vệ tài chính</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Dịch vụ thương hiệu</h4>
+                <ul>
+                    <li><a href="#">Chất lượng thợ</a></li>
+                    <li><a href="#">Vật liệu xanh</a></li>
+                    <li><a href="#">Công ty thiết kế</a></li>
+                    <li><a href="#">Công ty con</a></li>
+                    <li><a href="#">Bảo vệ tài chính</a></li>
+                    <li><a href="#">Hợp tác tài chính</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Tin tức</h4>
+                <ul>
+                    <li><a href="#">Tin doanh nghiệp</a></li>
+                    <li><a href="#">Tin vui Tinh Nghệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="footer-qr-codes">
+                    <div class="footer-qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://facebook.com" alt="QR Facebook">
+                    </div>
+                    <div class="footer-qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://zalo.me" alt="QR Zalo">
+                    </div>
+                    <div class="footer-qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://instagram.com" alt="QR Instagram">
+                    </div>
+                </div>
+                <p style="margin-top: 10px; font-size: 13px;">Quét mã để theo dõi</p>
+            </div>
+
+            <div class="footer-contact">
+                <div class="footer-contact-phones">
+                    <div class="footer-phone-item">
+                        <h5><span class="material-symbols-outlined" style="font-size: 20px; vertical-align: middle;">call</span> 1900-1991</h5>
+                        <p>Hotline toàn quốc (T2-CN)</p>
+                    </div>
+                    <div class="footer-phone-item">
+                        <h5>Hotline chăm sóc khách hàng</h5>
+                        <h5><span class="material-symbols-outlined" style="font-size: 20px; vertical-align: middle;">call</span> 1900-5085</h5>
+                        <p>Tư vấn miễn phí (T2-CN)</p>
+                    </div>
+                </div>
+                <div class="footer-address">
+                    <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle;">location_on</span>
+                    Số 8 đường Trần Duy Hưng<br>
+                    Quận Cầu Giấy, Hà Nội
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Tinh Nghệ">
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright © 2026 Tập đoàn Tinh Nghệ - Bản quyền thuộc về công ty</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <div class="floating-button">
+        <div class="floating-btn">
+            <span class="material-symbols-outlined" style="font-size: 32px;">chat</span>
+            <div class="floating-btn-text">Chat ngay</div>
+        </div>
+    </div>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        const prevBtn = document.querySelector('.hero-arrow-left');
+        const nextBtn = document.querySelector('.hero-arrow-right');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Random counter animation
+        function animateCounter() {
+            const counter = document.getElementById('quote-counter');
+            let currentValue = parseInt(counter.textContent);
+            const increment = Math.floor(Math.random() * 3) + 1; // Random 1-3
+            counter.textContent = currentValue + increment;
+        }
+
+        // Update counter every 3-8 seconds randomly
+        function scheduleCounterUpdate() {
+            const delay = Math.floor(Math.random() * 5000) + 3000; // 3-8 seconds
+            setTimeout(() => {
+                animateCounter();
+                scheduleCounterUpdate();
+            }, delay);
+        }
+
+        scheduleCounterUpdate();
+
+        // Random jumping price display
+        function startPriceJump() {
+            const priceElement = document.querySelector('.quote-result-number');
+            if (priceElement) {
+                setInterval(() => {
+                    const randomPrice = Math.floor(Math.random() * 50000000) + 800000000;
+                    priceElement.textContent = randomPrice.toLocaleString('vi-VN');
+                }, 600);
+            }
+        }
+
+        startPriceJump();
+
+        // Calculate quote function
+        function calculateQuote() {
+            const area = document.getElementById('area-input').value;
+            const phone = document.getElementById('phone-input').value;
+            
+            if (!area || !phone) {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+                return;
+            }
+
+            // Random price calculation (10-15 million per m²)
+            const pricePerSqm = Math.floor(Math.random() * 5000000) + 10000000;
+            const totalPrice = Math.floor(area * pricePerSqm);
+            
+            // Animate result
+            const resultElement = document.getElementById('quote-result');
+            let currentPrice = 0;
+            const increment = Math.floor(totalPrice / 50);
+            
+            const animation = setInterval(() => {
+                currentPrice += increment;
+                if (currentPrice >= totalPrice) {
+                    currentPrice = totalPrice;
+                    clearInterval(animation);
+                }
+                resultElement.textContent = currentPrice.toLocaleString('vi-VN');
+            }, 20);
+
+            // Increment counter
+            animateCounter();
+        }
+
+        // Style Tabs
+        const styleTabs = document.querySelectorAll('.style-tab');
+        styleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                styleTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Style Filters
+        const filterItems = document.querySelectorAll('.filter-item');
+        filterItems.forEach(item => {
+            item.addEventListener('click', () => {
+                filterItems.forEach(f => f.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+
+        // News Tabs
+        const newsTabs = document.querySelectorAll('.news-tab');
+        newsTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                newsTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handlers
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Cảm ơn bạn đã gửi thông tin! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+            });
+        });
+
+        // Add scroll effect to header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 4px 12px 0px';
+            } else {
+                header.style.boxShadow = 'rgba(0, 0, 0, 0.06) 0px 1px 6px 0px';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Random featured designer on page load
+        const designerData = [
+            {
+                image: 'assets/nhan vien/Picture25.jpg',
+                name: 'Ông XIA AI WEI',
+                title: 'Giám đốc thiết kế',
+                info: 'Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: thiết kế biệt thự, thiết kế không gian trung bay văn hóa, thiết kế khách sạn và tòa nhà văn phòng'
+            },
+            {
+                image: 'assets/nhan vien/Picture26.jpg',
+                name: 'Ông ZOU XIAN CHUN',
+                title: 'Giám đốc công trình',
+                info: 'Kỹ sư cao cấp',
+                specialty: 'Chuyên hướng: Biệt thự, Nhà ở riêng, Không gian thương mại'
+            },
+            {
+                image: 'assets/nhan vien/Picture27.jpg',
+                name: 'Ông YANG LEI',
+                title: 'Giám đốc vận hành',
+                info: 'Chuyên gia vận hành cấp cao',
+                specialty: 'Chuyên hướng: bất động sản nhà ở, khách sạn, tòa nhà văn phòng, truyền thông văn hóa'
+            },
+            {
+                image: 'assets/nhan vien/Picture28.jpg',
+                name: 'Ông MA WEN',
+                title: 'Quản lý công trình',
+                info: 'Quản lý công trình cấp cao',
+                specialty: 'Chuyên hướng: biệt thự, nhà ở tư nhân, không gian thương mại'
+            },
+            {
+                image: 'assets/nhan vien/Picture30.jpg',
+                name: 'Ông LI AO',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: phong cách hiện đại, cổ điển châu Âu, tân Trung Hoa'
+            },
+            {
+                image: 'assets/nhan vien/Picture31.jpg',
+                name: 'Ông SHAO YANG ZHONG',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Kiến trúc sư nội thất cao cấp  tốt nghiệp từ trường Đại học Thanh Hoa',
+                specialty: 'Chuyên hướng: phong cách hiện đại tối giản, phong cách Ý sang trọng nhẹ, phong cách cổ điển châu Âu'
+            },
+            {
+                image: 'assets/nhan vien/Picture32.jpg',
+                name: 'Ông SUN FEI',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: phong cách hiện đại, phong cách sang trọng, phong cách Ý'
+            },
+            {
+                image: 'assets/nhan vien/Picture33.jpg',
+                name: 'Ông WU HAI YU',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Gia tốc về khai thác, công nghệ sư thiết kế cao',
+                specialty: 'Chuyên hướng: phòng cách hiện đại, phòng cách mỹ tắm dộc; phòng cách văn học cổ điển'
+            },
+            {
+                image: 'assets/nhan vien/Picture34.jpg',
+                name: 'Bà LIU KE KE',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: Biệt thự, thiết kế khách sạn'
+            },
+            {
+                image: 'assets/nhan vien/Picture35.jpg',
+                name: 'Bà TAO LING',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: phong cách hiện đại, phong cách Pháp'
+            },
+            {
+                image: 'assets/nhan vien/Picture36.jpg',
+                name: 'Ông LOU YI LUN',
+                title: 'Thiết kế sư hàng đầu',
+                info: 'Chuyên gia phần ánh sáng hạng I được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: thiết kế ánh sáng nội thất, thiết kế ánh sáng cảnh quan/ngoại thất'
+            },
+            {
+                image: 'assets/nhan vien/Picture37.png',
+                name: 'Bà WANG HUAI RONG',
+                title: 'Nhà thiết kế triển khai chi tiết',
+                info: 'Trợ giảng đại học kiến trúc, nhà thiết kế được cấp chứng chỉ quốc gia',
+                specialty: 'Chuyên hướng: phong cách hiện đại, phong cách , phong cách nhẹ nhàng trung tính, phong cách Wabi-Sabi của Nhật'
+            }
+        ];
+
+        function loadRandomDesigner() {
+            const randomIndex = Math.floor(Math.random() * designerData.length);
+            const designer = designerData[randomIndex];
+            
+            const featuredImg = document.querySelector('.designer-featured img');
+            const featuredName = document.querySelector('.designer-featured-name');
+            const featuredTitle = document.querySelector('.designer-featured-title');
+            const featuredDetails = document.querySelector('.designer-featured-details');
+            
+            if (featuredImg && featuredName && featuredTitle && featuredDetails) {
+                featuredImg.src = designer.image;
+                featuredName.textContent = designer.name;
+                featuredTitle.textContent = designer.title;
+                featuredDetails.innerHTML = `
+                    ${designer.info}<br><br>
+                    ${designer.specialty}
+                `;
+            }
+        }
+
+        // Load random designer on page load
+        loadRandomDesigner();
+
+        // Add hover functionality to small designer cards
+        const designerCards = document.querySelectorAll('.designer-card:not(.text-card)');
+        
+        designerCards.forEach((card, index) => {
+            card.addEventListener('mouseenter', function() {
+                // Map card index to designer data index
+                const cardImageSrc = card.querySelector('img')?.src;
+                
+                if (cardImageSrc) {
+                    // Find matching designer in data
+                    const designer = designerData.find(d => cardImageSrc.includes(d.image.replace('assets/nhan vien/', '')));
+                    
+                    if (designer) {
+                        const featuredImg = document.querySelector('.designer-featured img');
+                        const featuredName = document.querySelector('.designer-featured-name');
+                        const featuredTitle = document.querySelector('.designer-featured-title');
+                        const featuredDetails = document.querySelector('.designer-featured-details');
+                        
+                        if (featuredImg && featuredName && featuredTitle && featuredDetails) {
+                            featuredImg.src = designer.image;
+                            featuredName.textContent = designer.name;
+                            featuredTitle.textContent = designer.title;
+                            featuredDetails.innerHTML = `
+                                ${designer.info}<br><br>
+                                ${designer.specialty}
+                            `;
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
