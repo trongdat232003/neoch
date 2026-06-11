@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Tập đoàn Trang trí Tinh Nghệ NEOCH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #00d4aa 0%, #00a3e0 100%);
+            --primary-color: #00d4aa;
+            --primary-color-dark: #00a3e0;
+        }
+
+        body {
+            font-family: '微软雅黑', '宋体', Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: normal;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 6px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .location-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #666666;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 0;
+            flex: 0 0 auto;
+        }
+
+        .search-bar select {
+            padding: 8px 40px 8px 15px;
+            border: 1px solid #e5e5e5;
+            border-right: none;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            appearance: none;
+            min-width: 100px;
+            color: #333333;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            min-width: 380px;
+            color: #333333;
+        }
+
+        .search-bar input::placeholder {
+            color: #999999;
+        }
+
+        .search-bar button {
+            padding: 8px 35px;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border: none;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info .phone-icon {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-info .phone-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            line-height: 1;
+        }
+
+        .contact-info .service-hours {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #ffffff;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .nav-item {
+            padding: 18px 28px;
+            font-size: 15px;
+            color: #333333;
+            text-decoration: none;
+            transition: color 300ms;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .nav-item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Company Intro Section */
+        .company-intro {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .intro-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        .intro-subtitle {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        /* Organization Structure */
+        .org-structure {
+            background-color: #f9f9f9;
+            padding: 60px;
+            border-radius: 12px;
+        }
+
+        .org-level {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .org-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .org-card {
+            background: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 300ms;
+            min-width: 280px;
+        }
+
+        .org-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 209, 170, 0.2) 0px 8px 24px 0px;
+        }
+
+        .org-card img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .org-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .org-card-subtitle {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .org-connector {
+            font-size: 40px;
+            color: #999999;
+            margin: 0 20px;
+        }
+
+        .org-arrow {
+            font-size: 48px;
+            color: #999999;
+            margin: 20px 0;
+        }
+
+        .org-center {
+            background: var(--primary-gradient);
+            border: none;
+            color: #ffffff;
+            padding: 40px;
+            min-width: 350px;
+        }
+
+        .org-center .org-card-title {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .org-center .org-card-subtitle {
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer-top-nav {
+            background-color: #2a2a2a;
+            padding: 40px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-top-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-top-item {
+            color: #ffffff;
+        }
+
+        .footer-top-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .footer-top-title {
+            font-size: 14px;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            padding: 60px 80px 30px;
+            color: #cccccc;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 300px;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 300ms;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #999999;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .intro-header {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(1) {
+            animation: slideInLeft 0.8s ease-out 0.2s backwards;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(3) {
+            animation: fadeInScale 0.8s ease-out 0.4s backwards;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(5) {
+            animation: slideInRight 0.8s ease-out 0.6s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(1) {
+            animation: slideInLeft 0.8s ease-out 0.8s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(3) {
+            animation: fadeInScale 0.8s ease-out 1s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(5) {
+            animation: slideInRight 0.8s ease-out 1.2s backwards;
+        }
+
+        .org-level:nth-child(3) .org-center {
+            animation: fadeInScale 1s ease-out 1.4s backwards, pulse 2s ease-in-out 2.4s infinite;
+        }
+
+        .org-level:nth-child(4) .org-card {
+            animation: fadeInUp 0.8s ease-out 1.8s backwards;
+        }
+
+        .org-connector {
+            animation: fadeInScale 0.5s ease-out 0.3s backwards;
+        }
+
+        .org-arrow {
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        .org-level:nth-child(1) .org-arrow {
+            animation-delay: 0.7s;
+        }
+
+        .org-level:nth-child(2) .org-arrow {
+            animation-delay: 1.3s;
+        }
+
+        .org-level:nth-child(3) .org-arrow {
+            animation-delay: 1.6s;
+        }
+
+        /* About NEOCH Section */
+        .about-neoch {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-left {
+            animation: slideInLeft 0.8s ease-out 0.3s backwards;
+        }
+
+        .about-right {
+            animation: slideInRight 0.8s ease-out 0.5s backwards;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .about-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .about-section-content {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.8;
+        }
+
+        .about-section-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Butler Service Section */
+        .butler-service {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .butler-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .butler-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .butler-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @keyframes floatUpRotate {
+            from {
+                opacity: 0;
+                transform: translateY(50px) rotate(-10deg) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes pulseCircle {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 209, 170, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(0, 209, 170, 0);
+            }
+        }
+
+        .butler-card {
+            text-align: center;
+            padding: 30px 20px;
+            animation: floatUpRotate 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+            transition: transform 0.3s ease;
+        }
+
+        .butler-card:nth-child(1) { animation-delay: 0.1s; }
+        .butler-card:nth-child(2) { animation-delay: 0.2s; }
+        .butler-card:nth-child(3) { animation-delay: 0.3s; }
+        .butler-card:nth-child(4) { animation-delay: 0.4s; }
+        .butler-card:nth-child(5) { animation-delay: 0.5s; }
+        .butler-card:nth-child(6) { animation-delay: 0.6s; }
+        .butler-card:nth-child(7) { animation-delay: 0.7s; }
+        .butler-card:nth-child(8) { animation-delay: 0.8s; }
+
+        .butler-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .butler-circle {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #e5e5e5;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .butler-circle::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .butler-card:hover .butler-circle {
+            border-color: transparent;
+            transform: scale(1.1) rotate(5deg);
+            animation: pulseCircle 1.5s ease-in-out infinite;
+        }
+
+        .butler-card:hover .butler-circle::before {
+            opacity: 1;
+        }
+
+        .butler-circle-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-circle-number {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .butler-circle-text {
+            font-size: 14px;
+            color: #666666;
+            text-align: center;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-circle-text {
+            color: #ffffff;
+        }
+
+        .butler-card-title {
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-card-title {
+            color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .butler-note {
+            text-align: center;
+            font-size: 13px;
+            color: #999999;
+            font-style: italic;
+            animation: fadeInUp 0.8s ease-out 1s backwards;
+        }
+
+        /* Quality Management System Section */
+        .quality-system {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+
+        .quality-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .quality-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .process-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 3px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .quality-process {
+            position: relative;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .process-step {
+            background: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 25px 20px;
+            transition: all 0.3s ease;
+            animation: fadeInScale 0.8s ease-out backwards;
+        }
+
+        .process-step:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 209, 170, 0.2) 0px 8px 24px 0px;
+        }
+
+        .step-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .step-description {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        /* Position steps in correct order */
+        .step-01 {
+            grid-column: 1;
+            grid-row: 1;
+            animation-delay: 0.2s;
+        }
+
+        .step-02 {
+            grid-column: 2;
+            grid-row: 1;
+            animation-delay: 0.4s;
+        }
+
+        .step-03 {
+            grid-column: 3;
+            grid-row: 1;
+            animation-delay: 0.6s;
+        }
+
+        .step-06 {
+            grid-column: 1;
+            grid-row: 2;
+            animation-delay: 1.2s;
+        }
+
+        .step-05 {
+            grid-column: 2;
+            grid-row: 2;
+            animation-delay: 1s;
+        }
+
+        .step-04 {
+            grid-column: 3;
+            grid-row: 2;
+            animation-delay: 0.8s;
+        }
+
+        .process-center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: 300;
+            color: #e5e5e5;
+            letter-spacing: 6px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+            animation: fadeIn 1s ease-out 1.5s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="logo.png" alt="Logo NEOCH">
+                <div class="location-selector">
+                    <span class="material-symbols-outlined" style="font-size: 16px; color: var(--primary-color);">location_on</span>
+                    <span>Hà Nội</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <select>
+                    <option>Tìm kiếm</option>
+                </select>
+                <input type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                <button>Tìm kiếm</button>
+            </div>
+
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <span class="material-symbols-outlined" style="color: var(--primary-color); font-size: 20px;">call</span>
+                </div>
+                <div class="contact-info-text">
+                    <div class="phone-number">400-101-1991</div>
+                    <div class="service-hours">7x24h dịch vụ</div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-item">Trang chủ</a>
+                <a href="#" class="nav-item">Mẫu thiết kế</a>
+                <a href="#" class="nav-item">Nhà thiết kế</a>
+                <a href="#" class="nav-item">Chi nhánh toàn quốc</a>
+                <a href="#" class="nav-item">Quản lý công trình</a>
+                <a href="#" class="nav-item">Vật liệu xanh</a>
+                <a href="#" class="nav-item">Cẩm nang trang trí</a>
+                <a href="#" class="nav-item">Sản phẩm</a>
+                <a href="gioi-thieu.html" class="nav-item active">Về công ty</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About NEOCH Section -->
+    <section class="about-neoch">
+        <h2 class="about-title">Về NEOCH</h2>
+        
+        <div class="about-content">
+            <div class="about-left">
+                <div class="about-section">
+                    <h3 class="about-section-title">Sứ mạng của doanh nghiệp</h3>
+                    <div class="about-section-content">
+                        <p><strong>Duy trì quản lý uy tín – Đảm bảo chuẩn mực ngành nghề – Tạo dựng chất lượng vượt thời gian</strong></p>
+                        <p>Trở thành một nền tảng dịch vụ một cửa xuất sắc trong lĩnh vực trang trí nội thất, cung cấp cho chủ nhà các giải pháp toàn diện cho bộ vòng đời của quá trình trang trí.</p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3 class="about-section-title">Triết lý phục vụ</h3>
+                    <div class="about-section-content">
+                        <p><strong>Chất lượng chân thực – Phục vụ tận tâm – Sáng tạo hoàn mỹ</strong></p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3 class="about-section-title">Triết lý quản lý</h3>
+                    <div class="about-section-content">
+                        <p><strong>Hệ thống hóa – Chuyên nghiệp hóa – Thông tin hóa – Tiêu chuẩn hóa – Quy mô hóa – Công nghiệp hóa</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <div class="about-section-content">
+                    <p>Từ lâu, NEOCH đã khẳng định vị thế với triết lý: "Khách hàng trên hết, Quản lý chuyên sâu, Nghệ thuật tâm huyết". Chúng tôi tập trung xây dựng chuỗi giá trị nhà ở trọn gói từ khâu thiết kế, thi công đến chăm sóc khách hàng, lấy yếu tố sáng tạo làm chủ đạo để tạo nền tảng lực cạnh tranh cốt lõi.</p>
+                    
+                    <p>Trong quá trình phát triển, NEOCH luôn kiên định với triết lý phát triển cơ bản về dịch vụ nội thất gia đình. Áp dụng quản lý thông tin tiên tiến cho doanh nghiệp, thấm nhuần sâu sắc khái niệm "Quản lý dịch vụ tích hợp, Xây dựng môi trường sống hài hòa" vào cốt lõi thương hiệu.</p>
+                    
+                    <p>Với hệ thống quản lý thông tin hiện đại và quy trình dịch vụ hoàn chỉnh, NEOCH hướn thành nhân tin trường "Dịch vụ và thông nhất, Kiến tạo không gian sống nhân văn". Chúng tôi không chỉ xây dựng những ngôi nhà mơ ước mà còn nỗ lực vươn tới hình mẫu doanh nghiệp xuất sắc hàng đầu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section class="company-intro">
+        <div class="intro-header">
+            <h1 class="intro-title">Cơ cấu tổ chức</h1>
+            <p class="intro-subtitle">Khoảnh khắc tuyệt vời</p>
+        </div>
+
+        <div class="org-structure">
+            <!-- Level 1: Top 3 Companies -->
+            <div class="org-level">
+                <div class="org-row">
+                    <div class="org-card">
+                        <img src="assets/to chuc/Picture38.png" alt="New Space">
+                        <div class="org-card-title">Công ty TNHH Quản lý Thiết kế Công trình</div>
+                        <div class="org-card-subtitle">Không gian Mới Thương Hải</div>
+                    </div>
+
+                    <div class="org-connector">+</div>
+
+                    <div class="org-card">
+                        <img src="assets/to chuc/Picture39.png" alt="Construction">
+                        <div class="org-card-title">Công ty TNHH Công trình Trang trí Hồ Đô</div>
+                        <div class="org-card-subtitle">Quy Châu</div>
+                    </div>
+
+                    <div class="org-connector">+</div>
+
+                    <div class="org-card">
+                        <img src="assets/to chuc/Picture40.png" alt="Management">
+                        <div class="org-card-title">Công ty TNHH Quản lý Thiết kế Kim Dư</div>
+                        <div class="org-card-subtitle">Quy Châu</div>
+                    </div>
+                </div>
+
+                <div class="org-arrow">
+                    <span class="material-symbols-outlined">south</span>
+                </div>
+            </div>
+
+            <!-- Level 2: Company Descriptions -->
+            <div class="org-level">
+                <div class="org-row">
+                    <div class="org-card" style="max-width: 280px;">
+                        <div class="org-card-title">Công ty thiết kế chuyên nghiệp</div>
+                    </div>
+
+                    <div class="org-connector">+</div>
+
+                    <div class="org-card" style="max-width: 280px;">
+                        <div class="org-card-title">Công ty thi công công trình chuyên nghiệp</div>
+                    </div>
+
+                    <div class="org-connector">+</div>
+
+                    <div class="org-card" style="max-width: 280px;">
+                        <div class="org-card-title">Công ty tư vấn thiết kế công trình chuyên nghiệp</div>
+                    </div>
+                </div>
+
+                <div class="org-arrow">
+                    <span class="material-symbols-outlined">south</span>
+                </div>
+            </div>
+
+            <!-- Level 3: Center - NEOCH -->
+            <div class="org-level">
+                <div class="org-row">
+                    <div class="org-card org-center">
+                        <img src="logo.png" alt="NEOCH" style="filter: brightness(0) invert(1);">
+                        <div class="org-card-title">Nền tảng hợp tác nội bộ NEOCH</div>
+                        <div class="org-card-subtitle">Thiết kế toàn diện chất lượng cao</div>
+                    </div>
+                </div>
+
+                <div class="org-arrow">
+                    <span class="material-symbols-outlined">south</span>
+                </div>
+            </div>
+
+            <!-- Level 4: Result -->
+            <div class="org-level">
+                <div class="org-row">
+                    <div class="org-card" style="max-width: 400px;">
+                        <div class="org-card-title">Cung cấp sản phẩm trang trí hài lòng cho người dùng</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Management System Section -->
+    <section class="quality-system">
+        <h2 class="quality-title">Hệ thống quản lý chất lượng</h2>
+        <p class="quality-subtitle">Our Quality</p>
+
+        <div class="quality-process">
+            <div class="process-container">
+                <div class="process-grid">
+                    <!-- Step 01 -->
+                    <div class="process-step step-01">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Hội nghị triển khai</h3>
+                        <p class="step-description">Họp brainstorm đa chuyên ngành, thảo luận các yếu tố và điều kiện kỹ thuật liên quan, đồng thời phân tích các yếu tố ẩn và đề xuất lời của dự án.</p>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="process-step step-02">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Hội nghị quyết định phương án</h3>
+                        <p class="step-description">So sánh nhiều phương án nội bộ, xác định tổng mặt bằng dự án và hướng phát triển chủ tiết không gian, đồng thời lần các điểm đột mới, sáng tạo của dự án.</p>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="process-step step-03">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Họp tránh nội bộ</h3>
+                        <p class="step-description">Bánh giá sơ bộ kết quả nội bộ, kịp thời chỉnh sửa và khắc phục thiếu sót, đảm bảo chất lượng sản phẩm, nâng cao độp mục đúng nhờ cầu tiêu tế của chủ đầu tư.</p>
+                    </div>
+
+                    <!-- Step 06 -->
+                    <div class="process-step step-06">
+                        <div class="step-number">06</div>
+                        <h3 class="step-title">Hội nghị tổng kết</h3>
+                        <p class="step-description">Sau khi dự án kết thúc, tiến hành hội nghị tổng kết nội bộ, đánh giá lại công việc, đúc kết kinh nghiệm, đồng thời tổng hợp những bài học và thành tựu từ dự án.</p>
+                    </div>
+
+                    <!-- Step 05 -->
+                    <div class="process-step step-05">
+                        <div class="step-number">05</div>
+                        <h3 class="step-title">Hội nghị hướng dẫn và giám sát</h3>
+                        <p class="step-description">Trong thời gian thi công dự án, nhân viên kỹ thuật sẽ duyệt phải đến hiện trường để giải quyết các vấn đề phát sinh, nhằm đảm bảo dự án được thực hiện đạt chất lượng cao nhất.</p>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="process-step step-04">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">Hội nghị hợp tác</h3>
+                        <p class="step-description">Dịch vụ bản giao thành quả, thương xuyên tổ chức họp phối hợp đa chuyên ngành, loại bỏ sự bất đồng thông tin giữa các bộ phận và bên ngoại, đảm bảo độp mục đúng nhờ cầu của chủ đầu tư.</p>
+                    </div>
+                </div>
+
+                <!-- Center text -->
+                <div class="process-center-text">
+                    Hệ thống quản lý chất lượng
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Butler Service Section -->
+    <section class="butler-service">
+        <h2 class="butler-title">Dịch vụ quản gia độc quyền của NEOCH</h2>
+        <p class="butler-subtitle">Dịch vụ chăm sóc toàn diện và chuyên nghiệp</p>
+
+        <div class="butler-grid">
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">2 năm</div>
+                    <div class="butler-circle-text">Bảo hành toàn bộ</div>
+                </div>
+                <div class="butler-card-title">Bảo hành công<br>trình trọn gói</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">2 tiếng</div>
+                    <div class="butler-circle-text">Thời gian phản hồi</div>
+                </div>
+                <div class="butler-card-title">Phản hồi dịch vụ<br>khách hàng</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">5 năm</div>
+                    <div class="butler-circle-text">Bảo hành chống thấm</div>
+                </div>
+                <div class="butler-card-title">Bảo hành hạng<br>mục chống thấm</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">Toàn cầu</div>
+                    <div class="butler-circle-text">Bảo hành liên kết</div>
+                </div>
+                <div class="butler-card-title">Bảo hành đa quốc<br>gia</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">NPS</div>
+                    <div class="butler-circle-text">Khảo sát định kỳ</div>
+                </div>
+                <div class="butler-card-title">Quản lý mức độ<br>hài lòng của<br>khách hàng</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">24/7</div>
+                    <div class="butler-circle-text">Hotline hỗ trợ</div>
+                </div>
+                <div class="butler-card-title">Chăm sóc khách<br>hàng qua hotline</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">Cam kết</div>
+                    <div class="butler-circle-text">Chất lượng<br>100%</div>
+                </div>
+                <div class="butler-card-title">Nếu không đạt<br>chuẩn sẽ miễn<br>phí làm lại</div>
+            </div>
+
+            <div class="butler-card">
+                <div class="butler-circle">
+                    <div class="butler-circle-number">Hoàn tất</div>
+                    <div class="butler-circle-text">Nghiệm thu công trình</div>
+                </div>
+                <div class="butler-card-title">Dịch vụ nghiệm<br>thu</div>
+            </div>
+        </div>
+
+        <p class="butler-note">* Các dịch vụ trên áp dụng theo điều khoản và điều kiện cụ thể</p>
+    </section>
+
+    <!-- Footer Top Navigation -->
+    <div class="footer-top-nav">
+        <div class="footer-top-grid">
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="footer-top-title">Báo giá miễn phí</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+                <div class="footer-top-title">Đặt lịch đo nhà</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">design_services</span>
+                </div>
+                <div class="footer-top-title">Thiết kế miễn phí</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="footer-top-title">Cam kết chất lượng</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <div class="footer-top-title">Hỗ trợ 24/7</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                </div>
+                <div class="footer-top-title">Bảo hành trọn đời</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu công ty</a></li>
+                    <li><a href="#">Tầm nhìn sứ mệnh</a></li>
+                    <li><a href="#">Lịch sử phát triển</a></li>
+                    <li><a href="#">Văn hóa doanh nghiệp</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Dịch vụ</h4>
+                <ul>
+                    <li><a href="#">Thiết kế nội thất</a></li>
+                    <li><a href="#">Thi công hoàn thiện</a></li>
+                    <li><a href="#">Quản lý công trình</a></li>
+                    <li><a href="#">Bảo hành bảo trì</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Hướng dẫn sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li><a href="#">Hotline: 400-101-1991</a></li>
+                    <li><a href="#">Email: info@neoch.vn</a></li>
+                    <li><a href="#">Địa chỉ: Hà Nội, Việt Nam</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Theo dõi chúng tôi</h4>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">facebook</span>
+                    <span class="material-symbols-outlined" style="font-size: 32px;">language</span>
+                    <span class="material-symbols-outlined" style="font-size: 32px;">photo_camera</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 NEOCH - Tập đoàn Trang trí Tinh Nghệ. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
