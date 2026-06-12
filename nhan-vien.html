@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Tập đoàn Trang trí Tinh Nghệ NEOCH</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #00d4aa 0%, #00a3e0 100%);
+            --primary-color: #00d4aa;
+            --primary-color-dark: #00a3e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: normal;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 6px 0px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .location-selector {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: #666666;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 0;
+            flex: 0 0 auto;
+        }
+
+        .search-bar select {
+            padding: 8px 40px 8px 15px;
+            border: 1px solid #e5e5e5;
+            border-right: none;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            appearance: none;
+            min-width: 100px;
+            color: #333333;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+            font-family: '微软雅黑', sans-serif;
+            min-width: 380px;
+            color: #333333;
+        }
+
+        .search-bar input::placeholder {
+            color: #999999;
+        }
+
+        .search-bar button {
+            padding: 8px 35px;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border: none;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 300ms;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info .phone-icon {
+            width: 35px;
+            height: 35px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .contact-info .phone-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            line-height: 1;
+        }
+
+        .contact-info .service-hours {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #ffffff;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 80px;
+        }
+
+        .nav-item {
+            padding: 18px 28px;
+            font-size: 15px;
+            color: #333333;
+            text-decoration: none;
+            transition: color 300ms;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+
+        .nav-item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Company Intro Section */
+        .company-intro {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .intro-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+
+        .intro-subtitle {
+            font-size: 16px;
+            color: #666666;
+        }
+
+        /* Organization Structure */
+        .org-structure {
+            background-color: #f9f9f9;
+            padding: 60px;
+            border-radius: 12px;
+        }
+
+        .org-level {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .org-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .org-card {
+            background: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 300ms;
+            min-width: 280px;
+        }
+
+        .org-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 209, 170, 0.2) 0px 8px 24px 0px;
+        }
+
+        .org-card img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .org-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .org-card-subtitle {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .org-connector {
+            font-size: 40px;
+            color: #999999;
+            margin: 0 20px;
+        }
+
+        .org-arrow {
+            font-size: 48px;
+            color: #999999;
+            margin: 20px 0;
+        }
+
+        .org-center {
+            background: var(--primary-gradient);
+            border: none;
+            color: #ffffff;
+            padding: 40px;
+            min-width: 350px;
+        }
+
+        .org-center .org-card-title {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .org-center .org-card-subtitle {
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer-top-nav {
+            background-color: #2a2a2a;
+            padding: 40px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-top-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-top-item {
+            color: #ffffff;
+        }
+
+        .footer-top-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .footer-top-title {
+            font-size: 14px;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            padding: 60px 80px 30px;
+            color: #cccccc;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 300px;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 300ms;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #999999;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .intro-header {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(1) {
+            animation: slideInLeft 0.8s ease-out 0.2s backwards;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(3) {
+            animation: fadeInScale 0.8s ease-out 0.4s backwards;
+        }
+
+        .org-level:nth-child(1) .org-row .org-card:nth-child(5) {
+            animation: slideInRight 0.8s ease-out 0.6s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(1) {
+            animation: slideInLeft 0.8s ease-out 0.8s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(3) {
+            animation: fadeInScale 0.8s ease-out 1s backwards;
+        }
+
+        .org-level:nth-child(2) .org-row .org-card:nth-child(5) {
+            animation: slideInRight 0.8s ease-out 1.2s backwards;
+        }
+
+        .org-level:nth-child(3) .org-center {
+            animation: fadeInScale 1s ease-out 1.4s backwards, pulse 2s ease-in-out 2.4s infinite;
+        }
+
+        .org-level:nth-child(4) .org-card {
+            animation: fadeInUp 0.8s ease-out 1.8s backwards;
+        }
+
+        .org-connector {
+            animation: fadeInScale 0.5s ease-out 0.3s backwards;
+        }
+
+        .org-arrow {
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        .org-level:nth-child(1) .org-arrow {
+            animation-delay: 0.7s;
+        }
+
+        .org-level:nth-child(2) .org-arrow {
+            animation-delay: 1.3s;
+        }
+
+        .org-level:nth-child(3) .org-arrow {
+            animation-delay: 1.6s;
+        }
+
+        /* About NEOCH Section */
+        .about-neoch {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+
+        .about-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-left {
+            animation: slideInLeft 0.8s ease-out 0.3s backwards;
+        }
+
+        .about-right {
+            animation: slideInRight 0.8s ease-out 0.5s backwards;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .about-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .about-section-content {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.8;
+        }
+
+        .about-section-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Butler Service Section */
+        .butler-service {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .butler-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .butler-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .butler-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @keyframes floatUpRotate {
+            from {
+                opacity: 0;
+                transform: translateY(50px) rotate(-10deg) scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes pulseCircle {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 209, 170, 0.4);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(0, 209, 170, 0);
+            }
+        }
+
+        .butler-card {
+            text-align: center;
+            padding: 30px 20px;
+            animation: floatUpRotate 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+            transition: transform 0.3s ease;
+        }
+
+        .butler-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .butler-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .butler-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .butler-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .butler-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .butler-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .butler-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .butler-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .butler-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .butler-circle {
+            width: 150px;
+            height: 150px;
+            border: 3px solid #e5e5e5;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .butler-circle::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .butler-card:hover .butler-circle {
+            border-color: transparent;
+            transform: scale(1.1) rotate(5deg);
+            animation: pulseCircle 1.5s ease-in-out infinite;
+        }
+
+        .butler-card:hover .butler-circle::before {
+            opacity: 1;
+        }
+
+        .butler-circle-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-circle-number {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .butler-circle-text {
+            font-size: 14px;
+            color: #666666;
+            text-align: center;
+            padding: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-circle-text {
+            color: #ffffff;
+        }
+
+        .butler-card-title {
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .butler-card:hover .butler-card-title {
+            color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .butler-note {
+            text-align: center;
+            font-size: 13px;
+            color: #999999;
+            font-style: italic;
+            animation: fadeInUp 0.8s ease-out 1s backwards;
+        }
+
+        /* Quality Management System Section */
+        .quality-system {
+            padding: 80px 80px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+
+        .quality-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .quality-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+            margin-bottom: 60px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .process-container {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 3px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .quality-process {
+            position: relative;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .process-step {
+            background: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 25px 20px;
+            transition: all 0.3s ease;
+            animation: fadeInScale 0.8s ease-out backwards;
+        }
+
+        .process-step:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 209, 170, 0.2) 0px 8px 24px 0px;
+        }
+
+        .step-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .step-description {
+            font-size: 13px;
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        /* Position steps in correct order */
+        .step-01 {
+            grid-column: 1;
+            grid-row: 1;
+            animation-delay: 0.2s;
+        }
+
+        .step-02 {
+            grid-column: 2;
+            grid-row: 1;
+            animation-delay: 0.4s;
+        }
+
+        .step-03 {
+            grid-column: 3;
+            grid-row: 1;
+            animation-delay: 0.6s;
+        }
+
+        .step-06 {
+            grid-column: 1;
+            grid-row: 2;
+            animation-delay: 1.2s;
+        }
+
+        .step-05 {
+            grid-column: 2;
+            grid-row: 2;
+            animation-delay: 1s;
+        }
+
+        .step-04 {
+            grid-column: 3;
+            grid-row: 2;
+            animation-delay: 0.8s;
+        }
+
+        .process-center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: 300;
+            color: #e5e5e5;
+            letter-spacing: 6px;
+            text-align: center;
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+            animation: fadeIn 1s ease-out 1.5s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Team Page Styles */
+        .team-section {
+            padding: 80px 80px 100px;
+            max-width: 1920px;
+            margin: 0 auto;
+            background-color: #f4f7f6;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .team-header {
+            text-align: center;
+            margin-bottom: 100px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .team-title {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -1px;
+        }
+        .team-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        .team-subtitle {
+            font-size: 18px;
+            color: #718096;
+            margin-top: 30px;
+            font-weight: 300;
+        }
+        .team-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px 30px;
+            padding: 20px;
+        }
+        .team-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 0 25px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            margin-top: 70px;
+            animation: fadeInUp 0.8s ease-out backwards;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,212,170,0.12);
+            border-color: rgba(0,212,170,0.3);
+        }
+        .team-image-wrapper {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: -75px auto 25px;
+            border: 6px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            position: relative;
+            background: #fff;
+            transition: all 0.4s ease;
+        }
+        .team-card:hover .team-image-wrapper {
+            border-color: #f8fcfb;
+        }
+        .team-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.6s ease;
+        }
+        .team-card:hover .team-image {
+            transform: scale(1.1) rotate(2deg);
+        }
+        .team-name {
+            font-size: 22px;
+            font-weight: 800;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        .team-role {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .team-desc {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            min-height: 70px;
+        }
+        .team-specialty {
+            font-size: 13px;
+            color: #a0aec0;
+            padding-top: 20px;
+            border-top: 1px solid #edf2f7;
+            font-style: italic;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="logo.png" alt="Logo NEOCH">
+                <div class="location-selector">
+                    <span class="material-symbols-outlined"
+                        style="font-size: 16px; color: var(--primary-color);">location_on</span>
+                    <span>Hà Nội</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <select>
+                    <option>Tìm kiếm</option>
+                </select>
+                <input type="text" placeholder="Nhập từ khóa tìm kiếm...">
+                <button>Tìm kiếm</button>
+            </div>
+
+            <div class="contact-info">
+                <div class="phone-icon">
+                    <span class="material-symbols-outlined"
+                        style="color: var(--primary-color); font-size: 20px;">call</span>
+                </div>
+                <div class="contact-info-text">
+                    <div class="phone-number">400-101-1991</div>
+                    <div class="service-hours">7x24h dịch vụ</div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-item">Trang chủ</a>
+                <a href="san-pham.html" class="nav-item">Sản phẩm</a>
+                <a href="nhan-vien.html" class="nav-item active">Đội ngũ</a>
+                <a href="gioi-thieu.html" class="nav-item">Về công ty</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-header">
+            <h1 class="team-title">Đội ngũ chuyên gia của chúng tôi</h1>
+            <p class="team-subtitle">Hội tụ những kiến trúc sư và nhà thiết kế xuất sắc nhất ngành nội thất</p>
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card" style="animation-delay: 0.2s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture25.jpg" alt="Ông XIA AI WEI" class="team-image">
+                </div>
+                <h3 class="team-name">Ông XIA AI WEI</h3>
+                <div class="team-role">Giám đốc thiết kế</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: thiết kế biệt thự, thiết kế không gian trung bay văn hóa, thiết kế khách sạn và tòa nhà văn phòng</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.30000000000000004s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture26.jpg" alt="Ông ZOU XIAN CHUN" class="team-image">
+                </div>
+                <h3 class="team-name">Ông ZOU XIAN CHUN</h3>
+                <div class="team-role">Giám đốc công trình</div>
+                <p class="team-desc">Kỹ sư cao cấp</p>
+                <div class="team-specialty">Chuyên hướng: Biệt thự, Nhà ở riêng, Không gian thương mại</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.4s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture27.jpg" alt="Ông YANG LEI" class="team-image">
+                </div>
+                <h3 class="team-name">Ông YANG LEI</h3>
+                <div class="team-role">Giám đốc vận hành</div>
+                <p class="team-desc">Chuyên gia vận hành cấp cao</p>
+                <div class="team-specialty">Chuyên hướng: bất động sản nhà ở, khách sạn, tòa nhà văn phòng, truyền thông văn hóa</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.5s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture28.jpg" alt="Ông MA WEN" class="team-image">
+                </div>
+                <h3 class="team-name">Ông MA WEN</h3>
+                <div class="team-role">Quản lý công trình</div>
+                <p class="team-desc">Quản lý công trình cấp cao</p>
+                <div class="team-specialty">Chuyên hướng: biệt thự, nhà ở tư nhân, không gian thương mại</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.2s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture30.jpg" alt="Ông LI AO" class="team-image">
+                </div>
+                <h3 class="team-name">Ông LI AO</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: phong cách hiện đại, cổ điển châu Âu, tân Trung Hoa</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.30000000000000004s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture31.jpg" alt="Ông SHAO YANG ZHONG" class="team-image">
+                </div>
+                <h3 class="team-name">Ông SHAO YANG ZHONG</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp  tốt nghiệp từ trường Đại học Thanh Hoa</p>
+                <div class="team-specialty">Chuyên hướng: phong cách hiện đại tối giản, phong cách Ý sang trọng nhẹ, phong cách cổ điển châu Âu</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.4s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture32.jpg" alt="Ông SUN FEI" class="team-image">
+                </div>
+                <h3 class="team-name">Ông SUN FEI</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: phong cách hiện đại, phong cách sang trọng, phong cách Ý</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.5s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture33.jpg" alt="Ông WU HAI YU" class="team-image">
+                </div>
+                <h3 class="team-name">Ông WU HAI YU</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Gia tốc về khai thác, công nghệ sư thiết kế cao</p>
+                <div class="team-specialty">Chuyên hướng: phòng cách hiện đại, phòng cách mỹ tắm dộc; phòng cách văn học cổ điển</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.2s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture34.jpg" alt="Bà LIU KE KE" class="team-image">
+                </div>
+                <h3 class="team-name">Bà LIU KE KE</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: Biệt thự, thiết kế khách sạn</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.30000000000000004s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture35.jpg" alt="Bà TAO LING" class="team-image">
+                </div>
+                <h3 class="team-name">Bà TAO LING</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Kiến trúc sư nội thất cao cấp, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: phong cách hiện đại, phong cách Pháp</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.4s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture36.jpg" alt="Ông LOU YI LUN" class="team-image">
+                </div>
+                <h3 class="team-name">Ông LOU YI LUN</h3>
+                <div class="team-role">Thiết kế sư hàng đầu</div>
+                <p class="team-desc">Chuyên gia phần ánh sáng hạng I được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: thiết kế ánh sáng nội thất, thiết kế ánh sáng cảnh quan/ngoại thất</div>
+            </div>
+            <div class="team-card" style="animation-delay: 0.5s;">
+                <div class="team-image-wrapper">
+                    <img src="assets/nhan vien/Picture37.png" alt="Bà WANG HUAI RONG" class="team-image">
+                </div>
+                <h3 class="team-name">Bà WANG HUAI RONG</h3>
+                <div class="team-role">Nhà thiết kế triển khai chi tiết</div>
+                <p class="team-desc">Trợ giảng đại học kiến trúc, nhà thiết kế được cấp chứng chỉ quốc gia</p>
+                <div class="team-specialty">Chuyên hướng: phong cách hiện đại, phong cách , phong cách nhẹ nhàng trung tính, phong cách Wabi-Sabi của Nhật</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Top Navigation -->
+    <div class="footer-top-nav">
+        <div class="footer-top-grid">
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">calculate</span>
+                </div>
+                <div class="footer-top-title">Báo giá miễn phí</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+                <div class="footer-top-title">Đặt lịch đo nhà</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">design_services</span>
+                </div>
+                <div class="footer-top-title">Thiết kế miễn phí</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">verified</span>
+                </div>
+                <div class="footer-top-title">Cam kết chất lượng</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <div class="footer-top-title">Hỗ trợ 24/7</div>
+            </div>
+            <div class="footer-top-item">
+                <div class="footer-top-icon">
+                    <span class="material-symbols-outlined">workspace_premium</span>
+                </div>
+                <div class="footer-top-title">Bảo hành trọn đời</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Về chúng tôi</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu công ty</a></li>
+                    <li><a href="#">Tầm nhìn sứ mệnh</a></li>
+                    <li><a href="#">Lịch sử phát triển</a></li>
+                    <li><a href="#">Văn hóa doanh nghiệp</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Dịch vụ</h4>
+                <ul>
+                    <li><a href="#">Thiết kế nội thất</a></li>
+                    <li><a href="#">Thi công hoàn thiện</a></li>
+                    <li><a href="#">Quản lý công trình</a></li>
+                    <li><a href="#">Bảo hành bảo trì</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Hướng dẫn sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li><a href="#">Hotline: 400-101-1991</a></li>
+                    <li><a href="#">Email: info@neoch.vn</a></li>
+                    <li><a href="#">Địa chỉ: Hà Nội, Việt Nam</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Theo dõi chúng tôi</h4>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">facebook</span>
+                    <span class="material-symbols-outlined" style="font-size: 32px;">language</span>
+                    <span class="material-symbols-outlined" style="font-size: 32px;">photo_camera</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="company-info-block" style="text-align: center; font-size: 14px; color: #888; line-height: 1.8; margin-top: 40px; padding: 30px 20px 10px; border-top: 1px solid #333;">
+            <p><strong style="color: #bbb;">NEOCH:</strong> Victory Tower Tầng 17 số 12 Tân Trào phường Tân Mỹ TP.HCM</p>
+            <p><strong style="color: #bbb;">弧度工程/金柚管理:</strong> 贵阳市.观山湖区.喀斯特公园2期8号楼4楼</p>
+            <p><strong style="color: #bbb;">Công trình HuDu / Quản lý JinYou:</strong> Tầng 4 Tòa nhà số 8 Công viên Karst (giai đoạn 2), khu Quan Sơn Hồ, Thành phố Quý Châu</p>
+            <p><strong style="color: #bbb;">新空间设计:</strong> 上海市杨浦区国权北路1688弄 湾谷科技园C6幢5层、3层</p>
+            <p><strong style="color: #bbb;">Thiết kế Không Gian Mới:</strong> Tầng 3, Tầng 5 tòa C6 khu khoa học kỹ thuật Vịnh Cốc, ngõ 1688 đường Quốc Quyền Bắc quận Dương Phố thành phố Thượng Hải</p>
+            <p style="margin-top: 15px; font-weight: 600; font-size: 15px; color: #ddd;">
+                <span style="margin-right: 30px;">越南TEL / Số Việt Nam: 0931888958</span>
+                <span>中国TEL / Số Trung Quốc: 13812633395</span>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NEOCH - Tập đoàn Trang trí Tinh Nghệ. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
